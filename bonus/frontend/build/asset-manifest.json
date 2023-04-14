@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.63a38ed3.css",
-    "main.js": "/static/js/main.3e81f9da.js",
+    "main.css": "/static/css/main.c98e584a.css",
+    "main.js": "/static/js/main.c30a76cf.js",
     "static/media/jobbg.jpg": "/static/media/jobbg.667fd8d0ebae0dbf848c.jpg",
     "static/media/hr-project.png": "/static/media/hr-project.4b14541114bbf0b14450.png",
     "index.html": "/index.html",
-    "main.63a38ed3.css.map": "/static/css/main.63a38ed3.css.map",
-    "main.3e81f9da.js.map": "/static/js/main.3e81f9da.js.map"
+    "main.c98e584a.css.map": "/static/css/main.c98e584a.css.map",
+    "main.c30a76cf.js.map": "/static/js/main.c30a76cf.js.map"
   },
   "entrypoints": [
-    "static/css/main.63a38ed3.css",
-    "static/js/main.3e81f9da.js"
+    "static/css/main.c98e584a.css",
+    "static/js/main.c30a76cf.js"
   ]
 }
