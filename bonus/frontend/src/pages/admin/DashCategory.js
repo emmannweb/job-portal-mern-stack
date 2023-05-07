@@ -71,7 +71,7 @@ const DashCategory = () => {
                 Jobs category
             </Typography>
             <Box sx={{ pb: 2, display: "flex", justifyContent: "right" }}>
-                <Button variant='contained' color="success" startIcon={<AddIcon />}> Create Category</Button>
+                <Button variant="contained" color="success" startIcon={<AddIcon />}><Link style={{ color: "white", textDecoration: "none" }} to='/admin/category/create'>Create category</Link></ Button>
             </Box>
             <Paper sx={{ bgcolor: "secondary.midNightBlue" }} >
 

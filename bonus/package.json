@@ -4,7 +4,7 @@
   "description": "job portal",
   "main": "app.js",
   "scripts": {
-     "start": "node backend/app.js",
+    "start": "node backend/app.js",
     "server": "nodemon backend/app.js"
   },
   "author": "Emmann",

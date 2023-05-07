@@ -1,5 +1,4 @@
 import { Avatar, Box } from '@mui/material'
-import React, { useEffect } from 'react'
 import Footer from '../component/Footer'
 import Navbar from '../component/Navbar'
 import LockOpenIcon from '@mui/icons-material/LockOpen';
@@ -7,9 +6,9 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import { useFormik } from 'formik';
 import * as yup from 'yup';
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { userSignUpAction } from '../redux/actions/userAction'
-import { useNavigate } from 'react-router-dom'
+
 
 const validationSchema = yup.object({
     firstName: yup
@@ -34,20 +33,7 @@ const validationSchema = yup.object({
 
 const Register = () => {
     const dispatch = useDispatch();
-    const navigate = useNavigate();
-    const { isAuthenticated, userInfo } = useSelector(state => state.signIn);
 
-    useEffect(() => {
-
-        // if (isAuthenticated) {
-        //     if (userInfo.role === 1) {
-        //         navigate('/admin/dashboard');
-        //     } else {
-        //         navigate('/user/dashboard');
-        //     }
-        // }
-
-    }, [])
 
     const formik = useFormik({
         initialValues: {

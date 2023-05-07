@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { Sidebar, Menu, MenuItem, menuClasses, useProSidebar } from 'react-pro-sidebar';
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import GroupAddIcon from '@mui/icons-material/GroupAdd';
-import { Box, Button, IconButton, useTheme } from '@mui/material';
+import { Box, useTheme } from '@mui/material';
 import WorkIcon from '@mui/icons-material/Work';
 import CategoryIcon from '@mui/icons-material/Category';
 import WorkHistoryIcon from '@mui/icons-material/WorkHistory';
