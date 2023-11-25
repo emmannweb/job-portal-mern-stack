@@ -1,4 +1,8 @@
 import {
+    DELETE_JOB_FAIL,
+    DELETE_JOB_REQUEST,
+    DELETE_JOB_RESET,
+    DELETE_JOB_SUCCESS,
     JOB_LOAD_FAIL,
     JOB_LOAD_REQUEST,
     JOB_LOAD_RESET,
@@ -80,5 +84,28 @@ export const registerAjobReducer = (state = {}, action) => {
         default:
             return state;
     }
+}
 
+// delete job by id
+//delete product by id
+export const deleteJobReducer = (state = {}, action) => {
+    switch (action.type) {
+        case DELETE_JOB_REQUEST:
+            return { loading: true }
+        case DELETE_JOB_SUCCESS:
+            return {
+                loading: false,
+                success: action.payload.success,
+                message: action.payload.message
+            }
+        case DELETE_JOB_FAIL:
+            return {
+                loading: false,
+                error: action.payload
+            }
+        case DELETE_JOB_RESET:
+            return {}
+        default:
+            return state;
+    }
 }
