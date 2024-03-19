@@ -4,6 +4,9 @@ import {
     DELETE_JOB_FAIL,
     DELETE_JOB_REQUEST,
     DELETE_JOB_SUCCESS,
+    EDIT_JOB_FAIL,
+    EDIT_JOB_REQUEST,
+    EDIT_JOB_SUCCESS,
     JOB_LOAD_FAIL,
     JOB_LOAD_REQUEST,
     JOB_LOAD_SINGLE_FAIL,
@@ -63,6 +66,26 @@ export const deleteSingleJobAction = (job_id) => async (dispatch) => {
     } catch (error) {
         dispatch({
             type: DELETE_JOB_FAIL,
+            payload: error.response.data.error
+        });
+        toast.error(error.response.data.error);
+    }
+}
+
+
+//edit single job action
+export const editSingleJobAction = (job) => async (dispatch) => {
+    dispatch({ type: EDIT_JOB_REQUEST });
+    try {
+        const { data } = await axios.put(`/api/job/update/${job._id}`, job);
+        dispatch({
+            type: EDIT_JOB_SUCCESS,
+            payload: data
+        });
+        toast.success("Job updated successfully");
+    } catch (error) {
+        dispatch({
+            type: EDIT_JOB_FAIL,
             payload: error.response.data.error
         });
         toast.error(error.response.data.error);

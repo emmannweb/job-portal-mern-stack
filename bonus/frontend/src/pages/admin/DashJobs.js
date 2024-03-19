@@ -49,13 +49,13 @@ const DashJobs = () => {
             field: 'jobType',
             headerName: 'Category',
             width: 150,
-            valueGetter: (data) => data.row.jobType.jobTypeName
+            valueGetter: (data) => data.row?.jobType?.jobTypeName
         },
         {
             field: 'user',
             headerName: 'User',
             width: 150,
-            valueGetter: (data) => data.row.user.firstName
+            valueGetter: (data) => data.row?.user?.firstName
         },
         {
             field: 'available',
