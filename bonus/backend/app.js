@@ -46,6 +46,7 @@ app.use(
   helmet.contentSecurityPolicy({
     useDefaults: true,
     directives: {
+      "script-src": ["'self'", "https://www.gstatic.com/charts/loader.js"],
       "img-src": ["'self'", "https: data:"]
     }
   })
