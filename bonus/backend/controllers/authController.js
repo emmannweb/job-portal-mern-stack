@@ -10,6 +10,7 @@ exports.signup = async (req, res, next) => {
         return next(new ErrorResponse("E-mail already registred", 400));
     }
     try {
+        req.body.role = 0; // this is to prevent anyone creating an admin user.
         const user = await User.create(req.body);
         res.status(201).json({
             success: true,

@@ -6,6 +6,7 @@ const bodyParser = require("body-parser");
 require("dotenv").config();
 var cors = require('cors');
 const path = require('path');
+const helmet = require('helmet');
 
 
 
@@ -40,6 +41,15 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(cookieParser());
 app.use(cors());
+// adding security headers
+app.use(
+  helmet.contentSecurityPolicy({
+    useDefaults: true,
+    directives: {
+      "img-src": ["'self'", "https: data:"]
+    }
+  })
+)
 
 
 //ROUTES MIDDLEWARE
